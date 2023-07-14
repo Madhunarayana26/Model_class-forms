@@ -20,6 +20,8 @@ def insert_webpage(request):
         if WMFD.is_valid():
             WMFD.save()
             return HttpResponse('Data inserted')
+        else:
+            return HttpResponse('<i>please enter a valid data</i>')
     return render(request,'insert_Webpage.html',d)
 
 def insert_accessrecord(request):
@@ -30,6 +32,9 @@ def insert_accessrecord(request):
         if AMFD.is_valid():
             AMFD.save()
             return HttpResponse('Data inserted')
+        else:
+            return HttpResponse('<i>please enter a valid data</i>')
+
     return render(request,'insert_accessrecord.html',d)
 
 
